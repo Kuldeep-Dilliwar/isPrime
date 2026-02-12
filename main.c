@@ -12,11 +12,11 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-// Function Prototype
-bool isPrime(int n);
+// unsigned long long goes up to 18,446,744,073,709,551,615
+bool isPrime(unsigned long long n);
 
 int main() {
-    int n = 0;
+    unsigned long long n = 0;
 
     printf("Enter a number to check primality: ");
     // Validate input is an integer
@@ -31,7 +31,7 @@ int main() {
     return 0;
 }
 
-bool isPrime(int n) {
+bool isPrime(unsigned long long n) {
     // 1. Handle small numbers and edge cases
     if (n <= 1) return false; // 0 and 1 are not prime
     if (n == 2 || n == 3) return true; // 2 and 3 are prime
