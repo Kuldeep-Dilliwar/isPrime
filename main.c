@@ -17,7 +17,7 @@ bool isPrime(unsigned long long n);
 int main() {
 	unsigned long long n = 0;
 	if (scanf("%llu", &n) != 1) return 1;
-	isPrime(n)?printf("Yep Prime"):printf("Nope not Prime");
+	printf(isPrime(n)?"\n Yup Prime \n":"\n Nope Not Prime \n");
 	return 0;	
 }
 
