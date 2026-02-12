@@ -16,7 +16,7 @@ bool isPrime(unsigned long long n);
 
 int main() {
 	unsigned long long n = 0;
-	scanf("%llu", &n);
+	if (scanf("%llu", &n) != 1) return 1;
 	isPrime(n)?printf("Yep Prime"):printf("Nope not Prime");
 	return 0;	
 }
@@ -25,6 +25,6 @@ bool isPrime(unsigned long long n) {
 	if(n<=1) return false;
 	if(n == 2 || n == 3) return true;
 	if(n%2 == 0 || n%3 == 0) return false;
-	for(int i = 5; i <= n/i; i += 6) if(n%i == 0 || n%(i+2) == 0) return false;
+	for(unsigned long long i = 5; i <= n/i; i += 6) if(n%i == 0 || n%(i+2) == 0) return false;
 	return true;
 }
