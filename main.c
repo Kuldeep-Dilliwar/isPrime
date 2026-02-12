@@ -15,6 +15,7 @@
 bool isPrime(unsigned long long n);
 
 int main() {
+	printf("\n");
 	unsigned long long n = 0;
 	if (scanf("%llu", &n) != 1) return 1;
 	printf(isPrime(n)?"Yup it's a prime. \n":"Nope not a prime. \n");
